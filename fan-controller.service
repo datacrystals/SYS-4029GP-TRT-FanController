@@ -1,0 +1,26 @@
+[Unit]
+Description=SuperMicro Fan Controller Service
+After=multi-user.target
+Requires=ipmi.service
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/FanController
+ExecStart=/usr/bin/python3 /opt/FanController/fan_controller.py
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=fan-controller
+
+# Security settings
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
