@@ -1,7 +1,7 @@
 [Unit]
 Description=SuperMicro Fan Controller Service
 After=multi-user.target
-Requires=ipmi.service
+#Requires=ipmi.service
 Wants=network.target
 
 [Service]
