@@ -18,9 +18,9 @@ MIN_SPEED = 18    # Minimum fan speed percentage
 MAX_SPEED = 100   # Maximum fan speed percentage
 TEMP_LOW = 70     # Temperature (°C) where we start increasing fan speed
 TEMP_HIGH = 90    # Temperature (°C) where we run at maximum speed
-CHECK_INTERVAL = 2  # Seconds between checks (more frequent)
+CHECK_INTERVAL = 1  # Seconds between checks (more frequent)
 SMOOTHING_SAMPLES = 10  # Number of temperature samples to average
-EXPONENTIAL_FACTOR = 2.5  # Higher values = more aggressive curve at high temps
+EXPONENTIAL_FACTOR = 2.1  # Higher values = more aggressive curve at high temps
 
 class GracefulExiter:
     def __init__(self):
